@@ -15,7 +15,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.props)
     return (
       <div className="App">
         <Header />
@@ -29,16 +28,10 @@ class App extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    ...state
-  }
-}
-
 const mapDispatchToProps = (dispatch) => {
   return {
     fetch: () => dispatch(fetchSmurfs)
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(App);
+export default connect(null, mapDispatchToProps)(App);

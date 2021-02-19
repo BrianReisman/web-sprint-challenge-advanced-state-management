@@ -33,8 +33,6 @@ const AddForm = (props) => {
     }
   };
 
-  let errorMessage = "";
-
   return (
     <section>
       <h2>Add Smurf</h2>
