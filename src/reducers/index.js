@@ -8,7 +8,7 @@ export const initialState = {
 
 const reducer = (state = initialState, action) => {
   console.log('>>>>>>>>',action.type);
-  // console.log(action.payload);
+  console.log(action.payload);
 
   switch (action.type) {
     case actionTypes.FETCH_SMURF_START:
@@ -28,6 +28,11 @@ const reducer = (state = initialState, action) => {
         ...state,
         isLoading: false,
         errorMessage: 'Something went wrong!',
+      }
+    case actionTypes.ERROR:
+      return {
+        ...state,
+        errorMessage: action.payload,
       }
     default:
       return state;

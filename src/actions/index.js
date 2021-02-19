@@ -36,7 +36,7 @@ export const addSmurf = (newSmurfObj) => {
   return { type: ADD_SMURF, newSmurf: newSmurfObj };
 };
 
-export const error = () => {
-  return { type: ERROR };
+export const error = (message) => {
+  return { type: ERROR, payload: message };
 };
 //3. Add a standard action that allows us to set the value of the error message slice of state.
